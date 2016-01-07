@@ -78,7 +78,7 @@ if (process.env.NODE_ENV !== 'production') {
 	config.module.loaders = config.module.loaders.concat([
 		{ test: /\.less/, loader: ExtractTextPlugin.extract(
 			'style',
-			'css-loader?sourceMap&minimize!postcss!less-loader?sourceMap'
+			'css-loader?sourceMap&minimize!less-loader?sourceMap'
 		)}
 	]);
 	config.devtool = 'source-map';
