@@ -55,9 +55,7 @@ Ensure you have [node][node-link] greater than version 4 (Code contains es6 synt
 
 2. Delete the existing git repository by running `rm -rf .git`
 
-3. Initialize a new git repository with `git init`, `git add .` and `git commit -m "Initial commit"`
-
-4. Run `npm install` to install the dependencies
+3. Run `npm install` to install the dependencies
 
 ### Development server (with hot reload)
 
