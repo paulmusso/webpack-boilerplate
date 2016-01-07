@@ -1,8 +1,8 @@
 {
-  "name": "html",
+  "name": "webpack-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "",
   "dependencies": {
     "bootstrap": "^3.3.6",
     "jquery": "^2.1.4",
