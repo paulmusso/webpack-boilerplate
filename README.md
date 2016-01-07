@@ -1,5 +1,9 @@
 # Webpack boilerplate
 
+[![Build Status](https://travis-ci.org/paulmusso/webpack-boilerplate.svg?branch=master)](https://travis-ci.org/paulmusso/webpack-boilerplate)
+[![Dependency Status](https://david-dm.org/paulmusso/webpack-boilerplate.svg)](https://david-dm.org/paulmusso/webpack-boilerplate)
+[![devDependency Status](https://david-dm.org/paulmusso/webpack-boilerplate/dev-status.svg)](https://david-dm.org/paulmusso/webpack-boilerplate#info=devDependencies)
+
 Starter kit for modern web app ([React][react-link], [Bootstrap][bootstrap-link], [jQuery][jquery-link]) and bundle logic with [Webpack][webpack-link] for development (with [hot reloading][hot-reloading-link]) and for production
 
 Made by [Paul Musso](https://twitter.com/paulmuss0)
