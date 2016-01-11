@@ -55,9 +55,6 @@ if (process.env.NODE_ENV !== 'production') {
 		'webpack-dev-server/client?http://localhost:8080',
 		'webpack/hot/dev-server'
 	]);
-	config.plugins = config.plugins.concat([
-		new webpack.HotModuleReplacementPlugin()
-	]);
 	config.module.loaders = config.module.loaders.concat([
 		{ test: /\.less/, loaders: [
 			'style',
