@@ -19,7 +19,7 @@ const config = {
 	output: {
 		path: path.join(__dirname, './dist'),
 		filename: 'bundle.js',
-		publicPath: '/'
+		publicPath: process.env.PUBLIC_PATH || '/'
 	},
 	resolve: {
 		extensions: ['', '.webpack.js', '.web.js', '.js', '.less'],

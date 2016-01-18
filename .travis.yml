@@ -2,9 +2,14 @@ language: node_js
 node_js:
   - stable
   - "4"
-script: npm run build
+script: PUBLIC_PATH=/webpack-boilerplate npm run build
 notifications:
   email:
     on_failure: change
 after_success:
+  - npm run semantic-release
   - bash ./deploy-gh-pages.sh
+branches:
+  except:
+    # Ignore Git tags created by semantic-release, like "v1.2.3"
+    - /^v\d+\.\d+\.\d+$/
