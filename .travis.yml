@@ -6,3 +6,5 @@ script: npm run build
 notifications:
   email:
     on_failure: change
+after_success:
+  - bash ./deploy-gh-pages.sh
