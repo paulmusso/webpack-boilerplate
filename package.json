@@ -1,6 +1,5 @@
 {
   "name": "webpack-boilerplate",
-  "version": "0.0.0",
   "description": "",
   "main": "",
   "dependencies": {
@@ -14,7 +13,7 @@
     "start": "webpack-dev-server --hot --host 0.0.0.0",
     "build": "cross-env NODE_ENV=production webpack --progress --colors -p",
     "serve": "cross-env NODE_ENV=production webpack-dev-server --host 0.0.0.0",
-    "semantic-release": "semantic-release pre && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "author": "Paul Musso",
   "engineStrict": true,
@@ -63,5 +62,9 @@
     "ghooks": {
       "commit-msg": "validate-commit-msg"
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulmusso/webpack-boilerplate.git"
   }
 }
