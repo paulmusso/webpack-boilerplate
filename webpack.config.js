@@ -52,7 +52,7 @@ const config = {
 
 if (process.env.NODE_ENV !== 'production') {
 	config.entry.vendor = config.entry.vendor.concat([
-		'webpack-dev-server/client?http://localhost:8080',
+		'webpack-dev-server/client?http://10.185.110.126:8080',
 		'webpack/hot/dev-server'
 	]);
 	config.module.loaders = config.module.loaders.concat([

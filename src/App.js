@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Dummy from './components/Dummy';
 
 export default class App extends Component {
 	render() {
@@ -32,7 +33,7 @@ export default class App extends Component {
 
 				<div className="container">
 					<div className="starter-template">
-						<h1></h1>
+						<h1>sss</h1>
 						<div className="picture"></div>
 						<p className="lead">
 							Webpack boilerplate uses :
@@ -43,6 +44,7 @@ export default class App extends Component {
 							<li>Bootstrap, React and jQuery packaged</li>
 							<li>Less for styles (hot reload enabled)</li>
 						</ul>
+                        <Dummy/>
 					</div>
 				</div>
 			</div>

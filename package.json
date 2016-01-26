@@ -6,12 +6,11 @@
   "dependencies": {
     "bootstrap": "^3.3.6",
     "jquery": "^2.1.4",
-    "react": "^0.14.5",
-    "react-dom": "^0.14.5"
+    "react": "^0.14.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --hot",
+    "test": "NODE_ENV=test karma start --single-run --no-auto-watch",
+    "start": "webpack-dev-server --hot --host=0.0.0.0",
     "build": "cross-env NODE_ENV=production webpack --progress --colors -p",
     "serve": "cross-env NODE_ENV=production webpack-dev-server"
   },
@@ -42,8 +41,18 @@
     "extract-text-webpack-plugin": "^1.0.0",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^1.7.0",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-intl-shim": "^1.0.3",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.3",
+    "karma-phantomjs-shim": "^1.2.0",
+    "karma-webpack": "^1.7.0",
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
+    "react-addons-test-utils": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "phantomjs": "^1.9.19",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
