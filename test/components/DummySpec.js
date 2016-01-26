@@ -12,7 +12,6 @@ describe("A dummy component", () => {
 
     it("starts with a div", function(){
         let root = ReactDOM.findDOMNode(this.component);
-		console.log(root);
         expect(root.tagName).toEqual('DIV');
     })
 })
