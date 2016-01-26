@@ -9,22 +9,27 @@ const process = require('process');
 const config = {
 	entry: {
 		vendor: [
-			'expose?jQuery!jquery',
-			'react',
+			'imports?exports=>false&module=>false!jquery',
+			'imports?exports=>false&module=>false!react',
 			'react-dom',
-			'bootstrap'
+			'imports?exports=>false&module=>false!bootstrapjs'
 		],
 		app: './src/index.js'
 	}, 
 	output: {
 		path: path.join(__dirname, './dist'),
 		filename: 'bundle.js',
-		publicPath: '/'
+		publicPath: process.env.PUBLIC_PATH || '/'
 	},
 	resolve: {
 		extensions: ['', '.webpack.js', '.web.js', '.js', '.less'],
 		root: __dirname,
-		modulesDirectories: ['node_modules', 'node_modules/bootstrap/less']
+		alias: {
+			jquery: 'jquery/dist/jquery.min.js',
+			react: 'react/dist/react.min.js',
+			'react-dom': 'react-dom/dist/react-dom.min.js',
+			'bootstrapjs': 'bootstrap/dist/js/bootstrap.min.js'
+		}
 	},
 	module: {
 		preLoaders: [
@@ -37,6 +42,11 @@ const config = {
 			{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,    loader: 'file' },
 			{ test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,    loader: 'url?limit=100000&mimetype=image/svg+xml' },
 			{ test: /\.jpg$/, loader: 'url?limit?100000'}
+		],
+		noParse: [
+			/react\.min\.js$/,
+			/jquery\.min\.js$/,
+			/bootstrap\.min\.js$/
 		]
 	},
 	plugins: [
@@ -52,7 +62,7 @@ const config = {
 
 if (process.env.NODE_ENV !== 'production') {
 	config.entry.vendor = config.entry.vendor.concat([
-		'webpack-dev-server/client?http://10.185.110.126:8080',
+		'./hotReload',
 		'webpack/hot/dev-server'
 	]);
 	config.module.loaders = config.module.loaders.concat([
