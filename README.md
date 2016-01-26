@@ -34,6 +34,7 @@ Made by [Paul Musso](https://twitter.com/paulmuss0)
   - Included in JS file for dependencies
   - It is exposed in global scope as [jQuery][jquery-link]
 - [Less][less-link] (CSS preprocessor)
+- Tests with [Karma][karma-link] [Jasmine][jasmine-link] [PhantomJS][phantomjs-link]
 
 [webpack-link]: http://webpack.github.io/
 [jquery-link]: https://jquery.com/
@@ -45,6 +46,9 @@ Made by [Paul Musso](https://twitter.com/paulmuss0)
 [eslint-link]: http://eslint.org/
 [webpack-analyse-link]: http://webpack.github.io/analyse/
 [node-link]: https://nodejs.org/en/
+[karma-link]: https://karma-runner.github.io/
+[jasmine-link]: http://jasmine.github.io/
+[phantomjs-link]: http://phantomjs.org/
 
 ## Getting started
 
@@ -78,6 +82,12 @@ Output files are copied to `dist` folder
 
 ```bash
 npm run serve
+```
+
+### Run tests
+
+```bash
+npm test
 ```
 
 ## License
