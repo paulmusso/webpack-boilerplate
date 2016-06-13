@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Dummy from './components/Dummy';
 
 export default class App extends Component {
 	render() {
@@ -32,17 +33,19 @@ export default class App extends Component {
 
 				<div className="container">
 					<div className="starter-template">
-						<h1></h1>
+						<h1>Webpack boilerplate forever !</h1>
 						<div className="picture"></div>
 						<p className="lead">
-							Webpack boilerplate uses :
+							It uses :
 						</p>
 						<ul>
 							<li>Webpack (dev and prod config)</li>
 							<li>React (hot reload enabled)</li>
 							<li>Bootstrap, React and jQuery packaged</li>
 							<li>Less for styles (hot reload enabled)</li>
+							<li>Karma, Jasmine and PhantomJS for tests</li>
 						</ul>
+                        <Dummy/>
 					</div>
 				</div>
 			</div>
