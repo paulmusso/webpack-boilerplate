@@ -9,10 +9,10 @@ const process = require('process');
 const config = {
 	entry: {
 		vendor: [
-			'imports?exports=>false&module=>false!jquery',
-			'imports?exports=>false&module=>false!react',
-			'react-dom',
-			'imports?exports=>false&module=>false!bootstrapjs'
+			'script!jquery',
+			'script!bootstrapjs',
+			'react',
+			'react-dom'
 		],
 		app: './src/index.js'
 	}, 
@@ -25,10 +25,7 @@ const config = {
 		extensions: ['', '.webpack.js', '.web.js', '.js', '.less'],
 		root: __dirname,
 		alias: {
-			jquery: 'jquery/dist/jquery.min.js',
-			react: 'react/dist/react.min.js',
-			'react-dom': 'react-dom/dist/react-dom.min.js',
-			'bootstrapjs': 'bootstrap/dist/js/bootstrap.min.js'
+			'bootstrapjs': 'bootstrap/dist/js/bootstrap.js'
 		}
 	},
 	module: {
@@ -79,7 +76,12 @@ if (process.env.NODE_ENV !== 'production') {
 		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.UglifyJsPlugin(),
-		new ExtractTextPlugin('[name].css')
+		new ExtractTextPlugin('[name].css'),
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: JSON.stringify('production')
+			}
+		})
 	]);
 	config.module.loaders = config.module.loaders.concat([
 		{ test: /\.less/, loader: ExtractTextPlugin.extract(
