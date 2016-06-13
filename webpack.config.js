@@ -39,11 +39,6 @@ const config = {
 			{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,    loader: 'file' },
 			{ test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,    loader: 'url?limit=100000&mimetype=image/svg+xml' },
 			{ test: /\.jpg$/, loader: 'url?limit?100000'}
-		],
-		noParse: [
-			/react\.min\.js$/,
-			/jquery\.min\.js$/,
-			/bootstrap\.min\.js$/
 		]
 	},
 	plugins: [
